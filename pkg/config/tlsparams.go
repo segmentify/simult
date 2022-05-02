@@ -96,6 +96,7 @@ func (t *TLSParams) Config() (c *tls.Config, err error) {
 	c = &tls.Config{
 		Certificates:             certs,
 		PreferServerCipherSuites: true,
+		MinVersion:               tls.VersionTLS12,
 	}
 	return
 }
